@@ -7,7 +7,7 @@ My personal token's liquidity pool is an opportunity to receive feedback from th
 The personal token is a primitive, a foundation for a much better system that incentivizes positive-sum collaboration over zero-sum competition. By sharing equity in our personal tokens with each other, we rise together.  I intend to dedicate myself towards building this system. 
 
 I need help to launch my token. I want:
-1. Feedback on the personal token [whitepaper](./whitepaper.md).
+1. Feedback on the personal token [whitepaper](../whitepaper.md).
 2. (Legal) Help writing the legal agreement, and ensuring compliance.
 3. (Technical) Help implementing the personal token onchain.
 4. (Storytelling) Help presenting my personal token in a powerful way.
