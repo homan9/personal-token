@@ -6,35 +6,37 @@ A personal token is an instrument for sharing the economic upside you create ove
 
 1. **Personal Token.** A personal token represents the economic value a person creates over the course of their life through endeavors with economic outcomes characterized by extreme upside potential, power-law distributions, and superlinear growth.
 
-2. **Value.** Realized value is the token owner's cumulative net realized profit from the sale (or other exit) of their holdings representing upside from these endeavors.
+2. **Holding.** A holding is a position in an upside instrument (such as a company) representing these endeavors.
 
-3. **Floor.** A personal token defines a floor that represents a portion of realized value that is excluded from shareholder claims.
+3. **Value.** Realized value is the token owner's cumulative net realized profit from exits of their holdings.
 
-4. **Scope.** The scope of a personal token is the realized value above the floor.
+4. **Floor.** A personal token defines a floor that represents a portion of realized value that is excluded from shareholder claims.
 
-5. **Shares.** A personal token has shares. Each share represents a proportional claim on the realized value within scope.
+5. **Scope.** The scope of a personal token is the token owner's realized value above the floor.
 
-6. **Control.** Shareholding in a personal token does not grant control or influence over the token owner's actions, decisions, or life. Shareholding is purely economic participation, not ownership or governance.
+6. **Shares.** A personal token has shares. Each share represents a proportional claim on the realized value within scope.
 
-7. **Transfer.** Personal token shares are not freely tradable. The token owner retains control over who may hold equity in their token. Secondary transfers require the token owner's approval.
+7. **Control.** Shareholding in a personal token does not grant control or influence over the token owner's actions, decisions, or life. Shareholding is purely economic participation, not ownership or governance.
 
-8. **Issuance.** The token owner may issue new shares at any time, diluting existing shareholders. There are no pro rata rights: token owners may refuse shareholders from purchasing future shares.
+8. **Transfer.** Personal token shares are not freely tradable. The token owner retains control over who may hold equity in their token. Secondary transfers require the token owner's approval.
 
-9. **Buybacks.** The token defines a buyback price function. The token owner may repurchase shares from any shareholder at a price per share no lower than the buyback price as determined by this function at the time of the buyback.
+9. **Issuance.** The token owner may issue new shares at any time, diluting existing shareholders. There are no pro rata rights: token owners may refuse shareholders from purchasing future shares.
 
-10. **Records.** The state and history of a personal token, including all parameters that affect its operation, are observable to shareholders.
+10. **Buybacks.** The token defines a buyback price function. The token owner may repurchase shares from any shareholder at a price per share no lower than the buyback price as determined by this function at the time of the buyback.
 
-11. **Wallet.** All proceeds from exits of holdings within scope flow to the personal token's wallet.
+11. **Records.** The state and history of a personal token, including all parameters that affect its operation, are observable to shareholders.
 
-12. **Distribution.** Any realized value within scope may be allocated to the token owner or distributed pro rata to shareholders as dividends, as determined by ongoing shareholder voting.
+12. **Wallet.** All proceeds from exits of holdings within scope flow to the personal token's wallet.
 
-13. **Royalties.** When a shareholder profits from selling shares, a percentage of their net profit is transferred to the token owner as royalty, paid in shares.
+13. **Distribution.** Any realized value within scope may be allocated to the token owner or distributed pro rata to shareholders as dividends, as determined by ongoing shareholder voting.
 
-14. **Dissolution.** Upon dissolution, the personal token is permanently terminated, all outstanding shares are extinguished, and no future value is within scope. Realized value within scope at the moment of dissolution remains subject to the personal token's existing capital flow rules.
+14. **Royalties.** When a shareholder profits from selling shares, a percentage of their net profit is transferred to the token owner as royalty, paid in shares.
 
-15. **Death.** At the death of a token owner, holdings within scope are liquidated, resulting realized value within scope is distributed according to the personal token's capital flow rules, and the personal token is dissolved.
+15. **Dissolution.** Upon dissolution, the personal token is permanently terminated, all outstanding shares are extinguished, and no future holdings are associated with it. For holdings at the moment of dissolution, realized value from their exit remains subject to the personal token's capital flow rules.
 
-16. **Amendment.** Amendments to the personal token may be proposed by the token owner. Shareholders must approve for the amendment to take effect.
+16. **Death.** At the death of a token owner, holdings within scope are liquidated, resulting realized value within scope is distributed according to the personal token's capital flow rules, and the personal token is dissolved.
+
+17. **Amendment.** Amendments to the personal token may be proposed by the token owner. Shareholders must approve for the amendment to take effect.
 
 ## Design
 
@@ -69,7 +71,7 @@ The token owner commits to the following obligations:
 - Ensuring that the token's state and history remain observable to shareholders, including all code and configuration that governs the token's operation.
 - Ensuring that any divergences across representations of the token's state are reconciled to converge on a single canonical state.
 
-Performance of these obligations is observable to shareholders and priced by market mechanisms. Intentional misrepresentation is subject to applicable law. All other actions and decisions by the token owner are discretionary and resolved by market mechanisms.
+Intentional misrepresentation is subject to applicable law. All other actions and decisions by the token owner are discretionary.
 
 ### Agreement
 
