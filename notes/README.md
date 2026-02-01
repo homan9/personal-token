@@ -1,0 +1,1 @@
+Notes about the [personal token](../whitepaper.md) whitepaper.
