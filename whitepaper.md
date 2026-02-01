@@ -4,69 +4,37 @@ A personal token is an instrument for sharing the economic upside you create ove
 
 ## Specification
 
-### Personal Token
+1. **Personal Token.** A personal token represents the economic value a person creates over the course of their life through endeavors with economic outcomes characterized by extreme upside potential, power-law distributions, and superlinear growth.
 
-A personal token represents the economic value a person creates over the course of their life through endeavors with economic outcomes characterized by extreme upside potential, power-law distributions, and superlinear growth.
+2. **Value.** Realized value is the token owner's cumulative net realized profit from the sale (or other exit) of their holdings representing upside from these endeavors.
 
-### Value
+3. **Floor.** A personal token defines a floor that represents a portion of realized value that is excluded from shareholder claims.
 
-Realized value is the token owner’s cumulative net realized profit from the sale (or other exit) of their holdings representing upside from these endeavors.
+4. **Scope.** The scope of a personal token is the realized value above the floor.
 
-### Floor
+5. **Shares.** A personal token has shares. Each share represents a proportional claim on the realized value within scope.
 
-A personal token defines a floor that represents a portion of realized value that is excluded from shareholder claims.
+6. **Control.** Shareholding in a personal token does not grant control or influence over the token owner's actions, decisions, or life. Shareholding is purely economic participation, not ownership or governance.
 
-### Scope
+7. **Transfer.** Personal token shares are not freely tradable. The token owner retains control over who may hold equity in their token. Secondary transfers require the token owner's approval.
 
-The scope of a personal token is the realized value above the floor.
+8. **Issuance.** The token owner may issue new shares at any time, diluting existing shareholders. There are no pro rata rights: token owners may refuse shareholders from purchasing future shares.
 
-### Shares
+9. **Buybacks.** The token defines a buyback price function. The token owner may repurchase shares from any shareholder at a price per share no lower than the buyback price as determined by this function at the time of the buyback.
 
-A personal token has shares. Each share represents a proportional claim on the realized value within scope.
+10. **Records.** The state and history of a personal token, including all parameters that affect its operation, are observable to shareholders.
 
-### Control
+11. **Wallet.** All proceeds from exits of holdings within scope flow to the personal token's wallet.
 
-Shareholding in a personal token does not grant control or influence over the token owner's actions, decisions, or life. Shareholding is purely economic participation, not ownership or governance.
+12. **Distribution.** Any realized value within scope may be allocated to the token owner or distributed pro rata to shareholders as dividends, as determined by ongoing shareholder voting.
 
-### Transfer
+13. **Royalties.** When a shareholder profits from selling shares, a percentage of their net profit is transferred to the token owner as royalty, paid in shares.
 
-Personal token shares are not freely tradable. The token owner retains control over who may hold equity in their token. Secondary transfers require the token owner’s approval.
+14. **Dissolution.** Upon dissolution, the personal token is permanently terminated, all outstanding shares are extinguished, and no future value is within scope. Realized value within scope at the moment of dissolution remains subject to the personal token's existing capital flow rules.
 
-### Issuance
+15. **Death.** At the death of a token owner, holdings within scope are liquidated, resulting realized value within scope is distributed according to the personal token's capital flow rules, and the personal token is dissolved.
 
-The token owner may issue new shares at any time, diluting existing shareholders. There are no pro rata rights: token owners may refuse shareholders from purchasing future shares.
-
-### Buybacks
-
-The token defines a buyback price function. The token owner may repurchase shares from any shareholder at a price per share no lower than the buyback price as determined by this function at the time of the buyback.
-
-### Records
-
-The state and history of a personal token, including all parameters that affect its operation, are observable to shareholders.
-
-### Wallet
-
-All proceeds from exits of holdings within scope flow to the personal token's wallet.
-
-### Distribution
-
-Any realized value within scope may be allocated to the token owner or distributed pro rata to shareholders as dividends, as determined by ongoing shareholder voting.
-
-### Royalties
-
-When a shareholder profits from selling shares, a percentage of their net profit is transferred to the token owner as royalty, paid in shares.
-
-### Dissolution
-
-Upon dissolution, the personal token is permanently terminated, all outstanding shares are extinguished, and no future value is within scope. Realized value within scope at the moment of dissolution remains subject to the personal token's existing capital flow rules.
-
-### Death
-
-At the death of a token owner, holdings within scope are liquidated, resulting realized value within scope is distributed according to the personal token's capital flow rules, and the personal token is dissolved.
-
-### Amendment
-
-Amendments to the personal token may be proposed by the token owner. Shareholders must approve for the amendment to take effect.
+16. **Amendment.** Amendments to the personal token may be proposed by the token owner. Shareholders must approve for the amendment to take effect.
 
 ## Design
 
