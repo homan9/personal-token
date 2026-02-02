@@ -11,6 +11,7 @@ I need help to launch my token. I want:
 2. (Legal) Help writing the legal agreement, and ensuring compliance.
 3. (Technical) Help implementing the personal token onchain.
 4. (Storytelling) Help presenting my personal token in a powerful way.
+
 I will share equity in my token with those who can help.
 
 [DM](https://x.com/heyhoman) or [email](mailto:homanuppu@gmail.com)
