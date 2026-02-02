@@ -1,3 +1,5 @@
+### Launching my token
+
 I view my [personal token](./whitepaper.md) as an instrument that helps me collaborate and connect with others, while helping me be grounded in reality.
 
 I intend to share equity in my token to incentivize collaboration at the level of my life - beyond any single idea - to amplify my efforts across everything i will ever do.
