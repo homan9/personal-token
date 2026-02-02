@@ -4,7 +4,7 @@ I intend to share equity in my token to incentivize collaboration at the level o
 
 My personal token's liquidity pool is an opportunity to receive feedback from the right people, including those who may disagree with me. I intend to create a curated community of people whose feedback I deeply respect, who can trade shares of my token freely amongst themselves.
 
-The personal token is a primitive, a foundation for a much better system that incentivizes positive-sum collaboration over zero-sum competition. By sharing equity in our personal tokens with each other, we rise together.  I intend to dedicate myself towards building this system. 
+The personal token is a primitive, a foundation for a much better system that incentivizes positive-sum collaboration over zero-sum competition. I intend to dedicate myself towards building this system. 
 
 I need help to launch my token. I want:
 1. Feedback on the personal token [whitepaper](../whitepaper.md).
