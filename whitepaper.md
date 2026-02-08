@@ -62,7 +62,7 @@ Holdings exist onchain (including across chains). The personal token's state con
 
 ## Obligations
 
-### Duties
+### Token Owner Duties
 
 The token owner commits to the following obligations:
 
@@ -72,6 +72,16 @@ The token owner commits to the following obligations:
 - Ensuring that any divergences across representations of the token's state are reconciled to converge on a single canonical state.
 
 Intentional misrepresentation is subject to applicable law. All other actions and decisions by the token owner are discretionary.
+
+### Shareholder Duties
+
+Shareholders commit to the following obligations:
+
+- Holding shares for their own benefit. Acting as nominee, agent, or proxy for any third party—including holding shares on behalf of another person, entering into agreements that transfer economic interest to non-shareholders, or voting per another party's instructions—is prohibited without the token owner's prior written approval.
+- Providing accurate identity and wallet information to the token owner.
+- Notifying the token owner promptly of changes to contact information or wallet address.
+
+Violation of these obligations constitutes breach of the Agreement.
 
 ### Agreement
 
