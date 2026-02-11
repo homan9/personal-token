@@ -1,1 +1,1 @@
-[Personal token v0.1](./whitepaper.md).
+[Personal token v0.1 spec](./whitepaper.md).

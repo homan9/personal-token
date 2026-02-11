@@ -159,11 +159,17 @@ Proceeds are the consideration received from an exit of a holding within scope, 
 
 ### Acquisition Cost
 
-Acquisition cost is the amount the token owner paid to acquire a holding, recorded at the time the holding is added to the set of holdings within scope. On an exit, realized value is computed as proceeds received minus the acquisition cost of the exited portion (net of direct exit fees); realized value can be positive (profit) or negative (loss), and negative realized value reduces cumulative realized value within scope. For partial exits, acquisition cost is allocated proportionally to the exited portion. Transform events (conversions, splits, rollovers) carry forward the acquisition cost from the prior holding form to the new form, allocating proportionally where appropriate.
+Acquisition cost is the amount the token owner paid to acquire a holding, recorded at the time the holding is added to the set of holdings within scope. 
+
+### Realized Value
+
+On an exit, realized value is computed as proceeds received minus the acquisition cost of the exited portion (net of direct exit fees); realized value can be positive (profit) or negative (loss), and negative realized value reduces cumulative realized value within scope. For partial exits, acquisition cost is allocated proportionally to the exited portion. Transform events (conversions, splits, rollovers) carry forward the acquisition cost from the prior holding form to the new form, allocating proportionally where appropriate.
+
+Transactions on the token owner's own shares – issuance, buybacks, secondary sales – do not affect cumulative net realized value. Realized value is derived solely from exits of holdings within scope.
 
 ### Distributing
 
-Distributing is evaluated per realization event. A single exit may produce multiple realization events over time (e.g., vesting tranches), each evaluated independently. The token tracks cumulative net realized value across all realization events (including losses), and the amount subject to shareholder vote is the portion of the current event that causes cumulative net realized value to exceed the floor.
+A realization event is when capital is realized from an exit of a holding. Distributing is evaluated per realization event. An exit may produce multiple realization events over time (e.g., vesting tranches), each evaluated independently. The token tracks cumulative net realized value across all realization events (including losses), and the amount subject to shareholder vote is the portion of the current event that causes cumulative net realized value to exceed the floor.
 
 ```
 1. cumulative_net = cumulative net realized value within scope to date (can be negative), excluding the current exit event.
@@ -330,3 +336,7 @@ IS_TRANSFER_ALLOWED(transfer):
 To pause all transfers: `return false`.
 
 Compliance requirements (KYC, jurisdiction restrictions, etc.) can be encoded directly into this function
+
+---
+
+Thanks to [Shiv](https://scholar.google.com/citations?user=WNUGEccAAAAJ&hl=en) for feedback on drafts.
