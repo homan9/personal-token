@@ -25,20 +25,6 @@ contract Village is IVillage {
     constructor() {
         owner = msg.sender;
         _nextId = 1;
-
-        // Add the owner as villager #1 with 100% cap and voteReinvest = true
-        uint256 id = _nextId++;
-        _villagers[id] = Villager({
-            wallet: msg.sender,
-            cap: 10000,
-            voteReinvest: true,
-            joinedAt: block.timestamp,
-            isActive: true
-        });
-        _addressToId[msg.sender] = id;
-        _activeCount++;
-
-        emit VillagerAdded(id, msg.sender);
     }
 
     // -------------------------------------------------------
@@ -47,6 +33,7 @@ contract Village is IVillage {
 
     function addVillager(address wallet, uint256 cap) external onlyOwner {
         require(wallet != address(0), "Village: zero address");
+        require(wallet != owner, "Village: cannot add owner as villager");
         require(_addressToId[wallet] == 0, "Village: address already registered");
         require(cap <= 10000, "Village: cap exceeds 100%");
 
@@ -65,8 +52,6 @@ contract Village is IVillage {
     }
 
     function removeVillager(uint256 id) external onlyOwner {
-        require(id != 1, "Village: cannot remove owner");
-
         Villager storage v = _villagers[id];
         require(v.isActive, "Village: villager not active");
 
@@ -77,28 +62,25 @@ contract Village is IVillage {
         emit VillagerRemoved(id, v.wallet);
     }
 
-    function recoverWallet(address oldWallet, address newWallet) external onlyOwner {
+    function setWallet(uint256 id, address newWallet) external onlyOwner {
         require(newWallet != address(0), "Village: zero address");
+        require(newWallet != owner, "Village: cannot set wallet to owner address");
         require(_addressToId[newWallet] == 0, "Village: new address already registered");
 
-        uint256 id = _addressToId[oldWallet];
-        require(id != 0, "Village: old address not found");
-        require(_villagers[id].isActive, "Village: villager not active");
+        Villager storage v = _villagers[id];
+        require(v.isActive, "Village: villager not active");
 
+        address oldWallet = v.wallet;
         delete _addressToId[oldWallet];
         _addressToId[newWallet] = id;
-        _villagers[id].wallet = newWallet;
+        v.wallet = newWallet;
 
-        // If the owner recovers their own wallet, update the owner reference
-        if (id == 1) {
-            owner = newWallet;
-        }
-
-        emit WalletRecovered(id, oldWallet, newWallet);
+        emit WalletSet(id, oldWallet, newWallet);
     }
 
     function transferOwnership(address newOwner) external onlyOwner {
         require(newOwner != address(0), "Village: zero address");
+        require(_addressToId[newOwner] == 0, "Village: address is a villager");
 
         address oldOwner = owner;
         owner = newOwner;
@@ -115,7 +97,7 @@ contract Village is IVillage {
         uint256 oldCap = v.cap;
         v.cap = cap;
 
-        emit CapUpdated(id, oldCap, cap);
+        emit CapSet(id, oldCap, cap);
     }
 
     // -------------------------------------------------------
@@ -126,7 +108,7 @@ contract Village is IVillage {
         uint256 id = _addressToId[msg.sender];
         _villagers[id].voteReinvest = _voteReinvest;
 
-        emit VoteChanged(id, _voteReinvest);
+        emit VoteSet(id, _voteReinvest);
     }
 
     // -------------------------------------------------------
@@ -134,6 +116,7 @@ contract Village is IVillage {
     // -------------------------------------------------------
 
     function getVillager(uint256 id) external view returns (Villager memory) {
+        require(id > 0 && id < _nextId, "Village: villager not found");
         return _villagers[id];
     }
 
@@ -148,6 +131,7 @@ contract Village is IVillage {
     }
 
     function isVillager(address wallet) external view returns (bool) {
+        if (wallet == owner) return true;
         uint256 id = _addressToId[wallet];
         return id != 0 && _villagers[id].isActive;
     }

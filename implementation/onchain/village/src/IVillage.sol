@@ -13,15 +13,15 @@ interface IVillage {
     // Events
     event VillagerAdded(uint256 indexed id, address indexed wallet);
     event VillagerRemoved(uint256 indexed id, address indexed wallet);
-    event WalletRecovered(uint256 indexed id, address indexed oldWallet, address indexed newWallet);
-    event CapUpdated(uint256 indexed id, uint256 oldCap, uint256 newCap);
-    event VoteChanged(uint256 indexed id, bool voteReinvest);
+    event WalletSet(uint256 indexed id, address indexed oldWallet, address indexed newWallet);
+    event CapSet(uint256 indexed id, uint256 oldCap, uint256 newCap);
+    event VoteSet(uint256 indexed id, bool voteReinvest);
     event OwnershipTransferred(address indexed oldOwner, address indexed newOwner);
 
     // Owner functions
     function addVillager(address wallet, uint256 cap) external;
     function removeVillager(uint256 id) external;
-    function recoverWallet(address oldWallet, address newWallet) external;
+    function setWallet(uint256 id, address newWallet) external;
     function setCap(uint256 id, uint256 cap) external;
     function transferOwnership(address newOwner) external;
 

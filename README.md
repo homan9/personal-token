@@ -1,1 +1,2 @@
-[Personal token v0.1 spec](./whitepaper.md).
+[Personal token whitepaper](./whitepaper.md).<br/>
+[My personal token](https://homantoken.com).

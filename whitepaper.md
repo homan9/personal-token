@@ -1,6 +1,17 @@
 # personal token v0.1
 
-A personal token is an instrument for sharing the economic upside you create over your life.
+A personal token is a financial instrument for sharing the economic upside a person creates over their lifetime. 
+
+It works by capturing the profits a token owner earns from selling equity stakes, and issuing shares that represent proportional claims on that value
+
+Shareholders hold purely economic stakes with no governance rights. The token owner retains full control over share issuance, transfers, and buybacks. All state and history are observable to shareholders. With:
+
+- **Floor** – a configurable portion of realized value excluded from shareholder claims.
+- **Buybacks** – the token owner may repurchase shares at a price no lower than a defined function.
+- **Royalties** – when a shareholder profits from selling shares, a percentage flows back to the token owner as new shares.
+- **Reinvestment** – shareholders vote on whether realized value is distributed or reinvested.
+
+This paper specifies the structure, mechanics, obligations, and norms of a personal token.
 
 ## Specification
 
